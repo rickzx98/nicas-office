@@ -1,0 +1,1 @@
+export { CustomersPageIndex } from './CustomersPageIndex';

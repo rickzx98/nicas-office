@@ -1,0 +1,193 @@
+.bootstrap-typeahead {
+    .bootstrap-tokenizer {
+        .token {
+            .token-removeable {
+                background-color: aquamarine;
+            }
+        }
+    }
+}
+
+.header-thumbnail {
+    border-radius: 10px;
+    margin-right: 5px;
+    border: 1px solid lightcoral;
+}
+
+.list-form {
+    .list-form-field-header {
+        border: none !important;
+        padding: 0;
+        padding-bottom: 4px;
+    }
+    .list-form-field-value {
+        &:hover {
+            background: whitesmoke;
+        }
+        &.active {
+            a {
+                color: white !important;
+            }
+        }
+        font-size: 14px;
+        font-weight: 500;
+        button {
+            margin-right: 5px;
+        }
+    }
+    .list-form-field-value-edit {
+        cursor: pointer;
+    }
+    .list-form-field-hidden {
+        display: none;
+    }
+}
+
+.collapse-header {
+    .panel-heading {
+        cursor: pointer;
+        .actions {
+            margin-top: -30px;
+            i {
+                &:hover {
+                    cursor: pointer;
+                }
+                font-size: 12px;
+                margin: 0 3px;
+            }
+            position: absolute;
+            right: 40px;
+        }
+    }
+}
+
+.text-input {
+    .text-input-group {
+        .glyphicon {
+            margin-left: -5px;
+        }
+    }
+}
+
+.image-upload {
+    h4 {
+        text-indent: 10px
+    }
+    cursor: pointer;
+    /* Fallback styles */
+    .book {
+        padding: 3px;
+        display: inline-block;
+        box-shadow: 5px 5px 20px #333;
+        margin: 10px;
+    }
+    .book img {
+        vertical-align: middle;
+        height: 16em;
+        width: 12em;
+    }
+    /*
+   *  In order for this to work, you must use Modernizer
+   *  to detect 3D transform browser support. This will add
+   *  a "csstransforms3d" class to the HTML element.
+   *
+   *  Visit http://modernizr.com/ for installation instructions
+   */
+    .csstransforms3d .books {
+        -moz-perspective: 100px;
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+    }
+    .csstransforms3d .book {
+        position: relative;
+        -moz-perspective: 100px;
+        -moz-transform: rotateY(-3deg);
+        -webkit-transform: perspective(100) rotateY(-3deg);
+        outline: 1px solid transparent;
+        /* Helps smooth jagged edges in Firefox */
+        box-shadow: none;
+        margin: 0;
+    }
+    .csstransforms3d .book img {
+        position: relative;
+        max-width: 100%;
+    }
+    .csstransforms3d .book:before,
+    .csstransforms3d .book:after {
+        position: absolute;
+        top: 2%;
+        height: 96%;
+        content: ' ';
+        z-index: -1;
+    }
+    .csstransforms3d .book:before {
+        width: 100%;
+        left: 7.5%;
+        background-color: #5a2d18;
+        box-shadow: 5px 5px 20px #333;
+    }
+    .csstransforms3d .book:after {
+        width: 5%;
+        left: 100%;
+        background-color: #EFEFEF;
+        box-shadow: inset 0px 0px 5px #aaa;
+        -moz-transform: rotateY(20deg);
+        -webkit-transform: perspective(100) rotateY(20deg);
+    }
+}
+
+.font-color-white {
+    color: white !important;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.page {
+    .page-header {
+        .page-background-fader {
+            z-index: 1;
+            width: 100%;
+            height: $page-header-height;
+            position: absolute;
+            background-color: $fd-bg-color;
+            opacity: 0.5;
+        }
+        height: $page-header-height;
+        .page-header-title {
+            z-index: 2;
+            position: relative;
+            padding-top: 30px;
+            color: $hd-text-color;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'BebasNeueRegular';
+            p {
+                &::first-letter {
+                    font-weight: 800;
+                    border-bottom: 1px solid $hd-text-color;
+                }
+            }
+        }
+    }
+    .page-body {
+        padding: 0 15px;
+    }
+}
+
+.padding-5px {
+    padding: 5px;
+}
+
+.padding-15px {
+    padding: 15px;
+}
+
+.padding-0-10pc {
+    padding: 0 10% !important;
+}
+
+.underline {
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,107 @@
+/* Variables */
+
+$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #ff0000;
+$hd-text-color: #ececed;
+$fd-bg-color: #3f5c73;
+$page-header-height: 130px;
+$loading-color: #E67E22;
+@import './mixin.scss';
+@import '../../node_modules/animate.css/animate.css';
+@import '../../node_modules/font-awesome/css/font-awesome.css';
+@import '../components/common/common.scss';
+@import '../components/customers/customers.scss';
+@import '../components/orders/orders.scss';
+@import '../components/home/home.scss';
+@import './paper.scss';
+
+/* Styles */
+
+body {
+    background-color: antiquewhite !important;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    color: #4d4d4d; //min-width: 70%;
+    //max-width: 70%;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+td {
+    padding: 12px;
+}
+
+h2 {
+    color: $vin-blue;
+}
+
+input.small {
+    width: 46px;
+}
+
+td.fuel-savings-label {
+    width: 175px;
+}
+
+.table {
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    cursor: pointer !important;
+                    background-color: wheat !important;
+                }
+            }
+        }
+    }
+}
+
+.floatLeft {
+    float: left;
+}
+
+.form-group {
+    label {
+        font-weight: 600;
+    }
+    .form-control {
+        color: black;
+        font-weight: 500;
+    }
+}
+
+.margin-bottom-5px {
+    margin-bottom: 5px;
+}
+
+.no-pad-left {
+    padding-left: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.center {
+    margin: auto;
+}
+
+.padding-left-15px {
+    padding-left: 15px;
+}
+
+.width100pc {
+    width: 100% !important;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.loading-icon {
+    color: $loading-color;
+}
