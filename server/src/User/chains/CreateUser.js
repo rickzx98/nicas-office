@@ -4,7 +4,9 @@ import { Chain } from 'fluid-chains';
 import { UserModel } from '../entity/';
 
 const chain = new Chain(CREATE_USER, action, undefined, USER_ERROR_HANDLER);
-
+chain.addSpec('fullname').require();
+chain.addSpec('password').require();
+chain.addSpec('createdBy').require();
 chain.addSpec('username')
     .require()
     .validator((currentValue, valid) => {
@@ -34,5 +36,17 @@ chain.addSpec('email')
     });
 
 function action(context, param, next) {
-
+    const fullname = param.fullname();
+    const password = param.password();
+    const createdBy = param.createdBy();
+    const username = param.username();
+    const email = param.email();
+    UserModel.create({
+        fullname, password, createdBy, username, email
+    }).then(user => {
+        context.set('user', user);
+        next();
+    }).catch(err => {
+        next(err);
+    });
 }

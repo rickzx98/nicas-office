@@ -37,5 +37,5 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-OrderSchema.plugin(mongoosePaginate);
+UserSchema.plugin(mongoosePaginate);
 export const UserModel = mongoose.model('user', UserSchema);

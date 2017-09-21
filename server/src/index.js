@@ -1,6 +1,6 @@
 import { ChainList, ChainStrictModeEnabled, ExecuteChain } from 'fluid-chains';
 import { ClusterChains, DatabaseChains, ExpressApp, GDSDomainResource, Logger, LoggerChains, ServerChains } from 'gds-stack';
-import { CustomerResource, OrderResource } from './app/';
+import { CustomerResource, OrderResource, UserResource } from './app/';
 
 import cors from 'cors';
 
@@ -40,6 +40,7 @@ ExecuteChain([
             const NicaResource = new GDSDomainResource(ExpressApp, 'api');
             new CustomerResource(NicaResource);
             new OrderResource(NicaResource);
+            new UserResource(NicaResource);
             ExpressApp.get('/api', (req, res) => {
                 res.status(200).send(NicaResource.getDTO(req));
             });
